@@ -1,8 +1,8 @@
 "use client"
-import {FolderPlus} from '@gravity-ui/icons';
+import { FolderPlus } from '@gravity-ui/icons';
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 
-const AddTask = () => {
+const AddTask = ({createATask}) => {
     return (
 
         <Modal>
@@ -16,11 +16,11 @@ const AddTask = () => {
                                 <FolderPlus className="size-5" />
                             </Modal.Icon>
                             <Modal.Heading>Add a Task</Modal.Heading>
-                            
+
                         </Modal.Header>
                         <Modal.Body className="p-6">
                             <Surface variant="default">
-                                <form className="flex flex-col gap-4">
+                                <form action = {createATask} className="flex flex-col gap-4">
                                     <TextField className="w-full" name="name" type="text" variant="secondary">
                                         <Label>Name</Label>
                                         <Input placeholder="Enter your name" />
@@ -41,15 +41,16 @@ const AddTask = () => {
                                         <Label>Message</Label>
                                         <Input placeholder="Enter your message" />
                                     </TextField>
+                                    <Modal.Footer>
+                                        <Button slot="close" variant="secondary">
+                                            Cancel
+                                        </Button>
+                                        <Button type='submit'>Submit Task</Button>
+                                    </Modal.Footer>
                                 </form>
                             </Surface>
                         </Modal.Body>
-                        <Modal.Footer>
-                            <Button slot="close" variant="secondary">
-                                Cancel
-                            </Button>
-                            <Button slot="close">Send Message</Button>
-                        </Modal.Footer>
+
                     </Modal.Dialog>
                 </Modal.Container>
             </Modal.Backdrop>
