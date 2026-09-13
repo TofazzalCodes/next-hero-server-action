@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "title": "Learn JavaScript",
+      "description": "Practice JavaScript fundamentals and ES6 features",
+      "priority": "High",
+      "status": "Pending",
+      "category": "Learning",
+      "dueDate": "2026-09-15"
+    },
+    {
+      "id": 2,
+      "title": "Build React Project",
+      "description": "Create a small task management application using React",
+      "priority": "High",
+      "status": "In Progress",
+      "category": "Development",
+      "dueDate": "2026-09-18"
+    },
+    {
+      "id": 3,
+      "title": "Practice Tailwind CSS",
+      "description": "Build a responsive landing page using Tailwind CSS",
+      "priority": "Medium",
+      "status": "Pending",
+      "category": "Learning",
+      "dueDate": "2026-09-16"
+    },
+    {
+      "id": 4,
+      "title": "Complete GitHub Profile",
+      "description": "Update GitHub bio, projects, and profile README",
+      "priority": "Low",
+      "status": "Completed",
+      "category": "Career",
+      "dueDate": "2026-09-12"
+    },
+    {
+      "id": 5,
+      "title": "Learn Next.js",
+      "description": "Practice Server Components, routing, and data fetching",
+      "priority": "High",
+      "status": "In Progress",
+      "category": "Learning",
+      "dueDate": "2026-09-20"
+    },
+    {
+      "id": 6,
+      "title": "Create Portfolio Website",
+      "description": "Build a modern responsive developer portfolio",
+      "priority": "Medium",
+      "status": "Pending",
+      "category": "Development",
+      "dueDate": "2026-09-25"
+    },
+    {
+      "id": 7,
+      "title": "Practice API Fetching",
+      "description": "Practice GET, POST, PUT, PATCH and DELETE requests",
+      "priority": "Medium",
+      "status": "Completed",
+      "category": "Development",
+      "dueDate": "2026-09-10"
+    },
+    {
+      "id": 8,
+      "title": "Prepare for Interview",
+      "description": "Review JavaScript and React interview questions",
+      "priority": "High",
+      "status": "Pending",
+      "category": "Career",
+      "dueDate": "2026-09-22"
+    },
+    {
+      "id": 9,
+      "title": "Practice Git Commands",
+      "description": "Practice branching, merging, pull requests, and Git workflow",
+      "priority": "Low",
+      "status": "Pending",
+      "category": "Learning",
+      "dueDate": "2026-09-19"
+    },
+    {
+      "id": 10,
+      "title": "Deploy React Project",
+      "description": "Deploy the completed project to Vercel or Netlify",
+      "priority": "Medium",
+      "status": "Pending",
+      "category": "Development",
+      "dueDate": "2026-09-28"
+    }
+  ]
