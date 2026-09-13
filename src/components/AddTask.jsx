@@ -1,8 +1,8 @@
 "use client"
 import { FolderPlus } from '@gravity-ui/icons';
-import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import { Button, Input, Label, Modal, Surface, TextField, ListBox, Select } from "@heroui/react";
 
-const AddTask = ({createATask}) => {
+const AddTask = ({ createATask }) => {
     return (
 
         <Modal>
@@ -20,27 +20,45 @@ const AddTask = ({createATask}) => {
                         </Modal.Header>
                         <Modal.Body className="p-6">
                             <Surface variant="default">
-                                <form action = {createATask} className="flex flex-col gap-4">
-                                    <TextField className="w-full" name="name" type="text" variant="secondary">
-                                        <Label>Name</Label>
-                                        <Input placeholder="Enter your name" />
+                                <form action={createATask} className="flex flex-col gap-4">
+                                    {/* title */}
+                                    <TextField className="w-full" name="title" type="text" variant="secondary">
+                                        <Label>Title</Label>
+                                        <Input placeholder="Enter your Task Title" />
                                     </TextField>
-                                    <TextField className="w-full" name="email" type="email" variant="secondary">
-                                        <Label>Email</Label>
-                                        <Input placeholder="Enter your email" />
+                                    {/* description */}
+                                    <TextField className="w-full" name="description" type="text" variant="secondary">
+                                        <Label>Description</Label>
+                                        <Input placeholder="Enter your description" />
                                     </TextField>
-                                    <TextField className="w-full" name="phone" type="tel" variant="secondary">
-                                        <Label>Phone</Label>
-                                        <Input placeholder="Enter your phone number" />
-                                    </TextField>
-                                    <TextField className="w-full" name="company" variant="secondary">
-                                        <Label>Company</Label>
-                                        <Input placeholder="Enter your company name" />
-                                    </TextField>
-                                    <TextField className="w-full" name="message" variant="secondary">
-                                        <Label>Message</Label>
-                                        <Input placeholder="Enter your message" />
-                                    </TextField>
+                                    {/* select priority*/}
+                                    <Select name='priority' className="w-full" placeholder="Select one" variant="secondary">
+                                        <Label>Priority</Label>
+                                        <Select.Trigger>
+                                            <Select.Value />
+                                            <Select.Indicator />
+                                        </Select.Trigger>
+                                        <Select.Popover>
+                                            <ListBox>
+                                                <ListBox.Item id="low" textValue="Low">
+                                                    Low
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                                <ListBox.Item id="medium" textValue="Medium">
+                                                    Medium
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                               
+                                                <ListBox.Item id="high" textValue="High">
+                                                    High
+                                                    <ListBox.ItemIndicator />
+                                                </ListBox.Item>
+                                                
+                                            </ListBox>
+                                        </Select.Popover>
+                                    </Select>
+
+                                   
                                     <Modal.Footer>
                                         <Button slot="close" variant="secondary">
                                             Cancel
